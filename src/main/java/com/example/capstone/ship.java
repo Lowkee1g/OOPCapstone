@@ -1,22 +1,18 @@
 package com.example.capstone;
 
-public class ship {
-    private int size;
-    private String name;
-
-    public void setSize(int size) {
-        this.size = size;
+public interface ship {
+    enum Direction {
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
     }
 
-    public int getSize() {
-        return this.size;
-    }
+    public void setSize(int size);
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public int getSize();
 
-    public String getName() {
-        return this.name;
-    }
+    public void setName(String name);
+
+    public String getName();
 }
