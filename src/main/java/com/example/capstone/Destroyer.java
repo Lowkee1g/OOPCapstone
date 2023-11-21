@@ -7,7 +7,10 @@ public class Destroyer implements ship {
         this.setSize(3);
         this.setName("Destroyer");
     }
-
+    @Override
+    public String toString() {
+        return "Destroyer";
+    }
     @Override
     public void setSize(int size) {
         this.size = size;

@@ -17,6 +17,7 @@ public class Map {
     private int width;
     private int height;
     private List<ship> ships;
+    private int placedShips;
     private Tiles[][] map;
 
     public Map(int width, int height) {
@@ -29,6 +30,13 @@ public class Map {
         for (int i = 0; i < this.width; i++)
             for (int j = 0; j < this.height; j++)
                 map[i][j] = Tiles.W;
+    }
+    public int getPlacedShips() {
+        return this.placedShips;
+    }
+
+    public void setPlacedShips() {
+        this.placedShips += 1;
     }
 
     public void addShip(ship ship, int[][] location, ship.Direction direction) {
@@ -55,6 +63,7 @@ public class Map {
                     }
                     break;
             }
+            setPlacedShips();
         } catch (Exception e) {
             System.out.println("You are most likely trying to place a ship outside the map, Error: " + e);
         }

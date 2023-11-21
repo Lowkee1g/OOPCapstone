@@ -8,6 +8,9 @@ public class SpeedBoat implements ship {
         this.setSize(2);
         this.setName("SpeedBoat");
     }
+    public String toString() {
+        return "SpeedBoat";
+    }
 
     @Override
     public void setSize(int size) {

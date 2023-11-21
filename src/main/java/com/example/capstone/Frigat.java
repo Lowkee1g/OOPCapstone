@@ -8,6 +8,10 @@ public class Frigat implements ship {
         this.setSize(4);
         this.setName("Frigat");
     }
+    @Override
+    public String toString() {
+        return "Frigat";
+    }
 
     @Override
     public void setSize(int size) {

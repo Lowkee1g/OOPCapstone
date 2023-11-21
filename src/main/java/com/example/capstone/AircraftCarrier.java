@@ -7,7 +7,10 @@ public class AircraftCarrier implements ship {
         this.setSize(5);
         this.setName("AircraftCarrier");
     }
-
+    @Override
+    public String toString() {
+        return getName();
+    }
     @Override
     public void setSize(int size) {
         this.size = size;

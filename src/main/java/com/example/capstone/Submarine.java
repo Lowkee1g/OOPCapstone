@@ -9,6 +9,11 @@ public class Submarine implements ship {
     }
 
     @Override
+    public String toString() {
+        return "Submarine";
+    }
+
+    @Override
     public void setSize(int size) {
         this.size = size;
     }
