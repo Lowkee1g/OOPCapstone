@@ -58,6 +58,7 @@ public class Game {
 
         System.out.println("You have placed all your ships");
 
+
         Enemy enemy = new Enemy();
         enemy.setShips(enemyMap);
 
