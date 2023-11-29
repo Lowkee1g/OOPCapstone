@@ -12,7 +12,8 @@ public class Map {
         F,
         A,
         W,
-        H
+        H,
+        X
     } // S = SpeedBoat, D = Destroyer, U = Submarine, B = Battleship, A = AircraftCarrier, W = Water, H = Hit
     private int width;
     private int height;
@@ -31,8 +32,16 @@ public class Map {
             for (int j = 0; j < this.height; j++)
                 map[i][j] = Tiles.W;
     }
+    public void TargetMap() {
+        for (int i = 0; i < this.width; i++)
+            for (int j = 0; j < this.height; j++)
+                map[i][j] = Tiles.X;
+    }
     public int getPlacedShips() {
         return this.placedShips;
+    }
+    public Tiles[][] getTiles() {
+        return this.map;
     }
 
     public void setPlacedShips() {
@@ -96,6 +105,7 @@ public class Map {
                     case U -> System.out.print(TerminalColors.YELLOW + "U ");
                     case F -> System.out.print(TerminalColors.YELLOW + "F ");
                     case H -> System.out.print(TerminalColors.RED + "H ");
+                    case X -> System.out.print(TerminalColors.RESET + "X ");
                 }
             System.out.println(TerminalColors.RESET);
         }

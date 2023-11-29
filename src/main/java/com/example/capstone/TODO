@@ -1,0 +1,3 @@
+Fix int[][] Location -> skal ikke være en matrix men et array med to ints
+skift Ship til en abstract class
+Ryk spil opsætningen ind i en classe for sig selv

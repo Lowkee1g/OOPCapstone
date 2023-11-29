@@ -22,7 +22,7 @@ public class Game {
 
 
 
-        while (playerMap.getPlacedShips() < 5) {
+        while (playerMap.getPlacedShips() < 1) {
             //scanner for user input
             playerMap.ShowMap();
             System.out.println("Enter a ship you want to place");
@@ -63,7 +63,16 @@ public class Game {
         enemy.setShips(enemyMap);
 
         playerMap.ShowMap();
-        enemyMap.ShowMap();
+        //System.out.println("# # # # # # # # # #");
+        //enemyMap.ShowMap();
+
+
+        //START OF THE GAME
+        /*
+        Map targetMap = new Map(10, 10);
+        */
+
+
 
     }
 }
