@@ -10,9 +10,9 @@ public class Game {
         Map enemyMap = new Map(10, 10);
         Scanner scanner = new Scanner(System.in);
 
-        HashMap<Integer, ship> PlacebleShips = new HashMap<>();
-        HashMap<Integer, ship> shipsLeft = new HashMap<>();
-        PlacebleShips.put(1, new Frigat());
+        HashMap<Integer, Ship> PlacebleShips = new HashMap<>();
+        HashMap<Integer, Ship> shipsLeft = new HashMap<>();
+        PlacebleShips.put(1, new Frigate());
         PlacebleShips.put(2, new SpeedBoat());
         PlacebleShips.put(3, new Submarine());
         PlacebleShips.put(4, new AircraftCarrier());
@@ -29,7 +29,7 @@ public class Game {
 
             //prints out all available ships
             for (Integer key : shipsLeft.keySet()) {
-                ship ship = shipsLeft.get(key);
+                Ship ship = shipsLeft.get(key);
                 System.out.println(key + " - " + ship); // This will print the key and the ship's name
             }
 
@@ -45,7 +45,7 @@ public class Game {
             String[] coordinates = input.split(",");
 
             //gets the direction from the user
-            ship.Direction direction = ship.Direction.valueOf(scanner.nextLine());
+            Ship.Direction direction = Ship.Direction.valueOf(scanner.nextLine());
             System.out.println("you are placing a: " + shipID + " at " + coordinates[0] + "," + coordinates[1] + " facing " + direction);
 
             //adds the ship to the map
@@ -68,9 +68,8 @@ public class Game {
 
 
         //START OF THE GAME
-        /*
+
         Map targetMap = new Map(10, 10);
-        */
 
 
 

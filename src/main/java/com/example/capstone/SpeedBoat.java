@@ -1,15 +1,17 @@
 package com.example.capstone;
 
-public class SpeedBoat implements ship {
+public class SpeedBoat extends Ship {
     private int size;
     private String name;
-    private int[][] location;
+
     public SpeedBoat() {
         this.setSize(2);
         this.setName("SpeedBoat");
     }
+
+    @Override
     public String toString() {
-        return "SpeedBoat";
+        return getName();
     }
 
     @Override

@@ -17,7 +17,7 @@ public class Map {
     } // S = SpeedBoat, D = Destroyer, U = Submarine, B = Battleship, A = AircraftCarrier, W = Water, H = Hit
     private int width;
     private int height;
-    private List<ship> ships;
+    private List<Ship> ships;
     private int placedShips;
     private Tiles[][] map;
 
@@ -48,7 +48,7 @@ public class Map {
         this.placedShips += 1;
     }
 
-    public void addShip(ship ship, int[] location, ship.Direction direction) {
+    public void addShip(Ship ship, int[] location, Ship.Direction direction) {
         try {
             switch (direction) {
                 case UP: // Transposed UP is LEFT
@@ -82,7 +82,7 @@ public class Map {
 
 
 
-    public void setShips(List<ship> ships) {
+    public void setShips(List<Ship> ships) {
         this.ships = ships;
     }
 

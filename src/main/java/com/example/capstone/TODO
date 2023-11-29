@@ -1,5 +1,6 @@
 DONE - Fix int[][] Location -> skal ikke være en matrix men et array med to ints
-skift Ship til en abstract class
+DONE - skift Ship til en abstract class
+DONE - Skift ship til Ship
 Ryk spil opsætningen ind i en classe for sig selv
 setup exception for hvis man prøver at placere et skib uden for boardet
 setup exception for hvis man skriver up i stedet for UP

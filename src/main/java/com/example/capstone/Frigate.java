@@ -1,16 +1,17 @@
 package com.example.capstone;
 
-public class Frigat implements ship {
+public class Frigate extends Ship {
     private int size;
     private String name;
-    private int[][] location;
-    public Frigat() {
+
+    public Frigate() {
         this.setSize(4);
-        this.setName("Frigat");
+        this.setName("Frigate");
     }
+
     @Override
     public String toString() {
-        return "Frigat";
+        return getName();
     }
 
     @Override
