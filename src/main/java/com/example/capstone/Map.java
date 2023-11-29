@@ -48,31 +48,32 @@ public class Map {
         this.placedShips += 1;
     }
 
-    public void addShip(ship ship, int[][] location, ship.Direction direction) {
+    public void addShip(ship ship, int[] location, ship.Direction direction) {
         try {
             switch (direction) {
                 case UP: // Transposed UP is LEFT
                     for (int i = 0; i < ship.getSize(); i++) {
-                        map[location[0][0]][location[0][1] - i] = Tiles.valueOf(ship.getName().substring(0, 1));
+                        map[location[0]][location[1] - i] = Tiles.valueOf(ship.getName().substring(0, 1));
                     }
                     break;
                 case DOWN: // Transposed DOWN is RIGHT
                     for (int i = 0; i < ship.getSize(); i++) {
-                        map[location[0][0]][location[0][1] + i] = Tiles.valueOf(ship.getName().substring(0, 1));
+                        map[location[0]][location[1] + i] = Tiles.valueOf(ship.getName().substring(0, 1));
                     }
                     break;
                 case LEFT: // Transposed LEFT is UP
                     for (int i = 0; i < ship.getSize(); i++) {
-                        map[location[0][0] - i][location[0][1]] = Tiles.valueOf(ship.getName().substring(0, 1));
+                        map[location[0] - i][location[1]] = Tiles.valueOf(ship.getName().substring(0, 1));
                     }
                     break;
                 case RIGHT: // Transposed RIGHT is DOWN
                     for (int i = 0; i < ship.getSize(); i++) {
-                        map[location[0][0] + i][location[0][1]] = Tiles.valueOf(ship.getName().substring(0, 1));
+                        map[location[0] + i][location[1]] = Tiles.valueOf(ship.getName().substring(0, 1));
                     }
                     break;
             }
             setPlacedShips();
+            System.out.println("You have placed " + getPlacedShips() + " ships");
         } catch (Exception e) {
             System.out.println("You are most likely trying to place a ship outside the map, Error: " + e);
         }

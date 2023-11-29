@@ -49,7 +49,7 @@ public class Game {
             System.out.println("you are placing a: " + shipID + " at " + coordinates[0] + "," + coordinates[1] + " facing " + direction);
 
             //adds the ship to the map
-            playerMap.addShip(shipsLeft.get(shipID), new int[][]{{Integer.parseInt(coordinates[0]), Integer.parseInt(coordinates[1])}}, direction);
+            playerMap.addShip(shipsLeft.get(shipID), new int[]{Integer.parseInt(coordinates[0]), Integer.parseInt(coordinates[1])}, direction);
 
             //removes the ship from the list of ships left to place
             shipsLeft.remove(shipID);
@@ -63,8 +63,8 @@ public class Game {
         enemy.setShips(enemyMap);
 
         playerMap.ShowMap();
-        //System.out.println("# # # # # # # # # #");
-        //enemyMap.ShowMap();
+        System.out.println("# # # # # # # # # #");
+        enemyMap.ShowMap();
 
 
         //START OF THE GAME
