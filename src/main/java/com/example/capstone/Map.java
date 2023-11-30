@@ -1,5 +1,6 @@
 package com.example.capstone;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -25,6 +26,7 @@ public class Map {
         this.width = width;
         this.height = height;
         map = new Tiles[width][height];
+        this.ships = new ArrayList<>();
         StartMap();
     }
     public void StartMap() {
@@ -44,11 +46,36 @@ public class Map {
         return this.map;
     }
 
+    public Tiles getTile(int[] location) {
+        return this.map[location[0]][location[1]];
+    }
+    public void setTile(int[] location, Tiles tile) {
+        this.map[location[0]][location[1]] = tile;
+    }
+
     public void setPlacedShips() {
         this.placedShips += 1;
     }
 
+    public Ship getShipFromTile(Tiles tile) {
+        for (Ship ship : ships) {
+            if (ship.getName().substring(0,1).equals(tile.toString())) {
+                return ship;
+            }
+        }
+        return null;
+    }
+    public List<Ship> getShips() {
+        return this.ships;
+    }
+
+    public void removeShip(Ship ship) {
+        this.ships.remove(ship);
+    }
+
+
     public void addShip(Ship ship, int[] location, Ship.Direction direction) {
+        addShip(ship);
         try {
             switch (direction) {
                 case UP: // Transposed UP is LEFT
@@ -82,8 +109,8 @@ public class Map {
 
 
 
-    public void setShips(List<Ship> ships) {
-        this.ships = ships;
+    public void addShip(Ship ship) {
+        this.ships.add(ship);
     }
 
     public int getWidth() {

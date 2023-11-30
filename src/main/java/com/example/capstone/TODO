@@ -1,6 +1,13 @@
 DONE - Fix int[][] Location -> skal ikke være en matrix men et array med to ints
 DONE - skift Ship til en abstract class
 DONE - Skift ship til Ship
+
+kig på en måde at gemme ship placeringer på måske lokalt i ship klassen
+Bed skibet om at lytte til boardet, hvis det bliver ramt, så skal det sige til boardet at det er ramt
+
+DONE - Skibet er et health, hver gang det bliver ramt tager vi et liv fra skibet.
+
+
 Ryk spil opsætningen ind i en classe for sig selv
 setup exception for hvis man prøver at placere et skib uden for boardet
 setup exception for hvis man skriver up i stedet for UP

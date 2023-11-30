@@ -5,4 +5,6 @@ module com.example.capstone {
 
     opens com.example.capstone to javafx.fxml;
     exports com.example.capstone;
+    exports com.example.capstone.ships;
+    opens com.example.capstone.ships to javafx.fxml;
 }

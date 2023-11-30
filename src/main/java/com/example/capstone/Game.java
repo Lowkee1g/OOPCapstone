@@ -1,8 +1,8 @@
 package com.example.capstone;
 
-import java.util.ArrayList;
+import com.example.capstone.ships.*;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
 public class Game {
     public static void main(String[] args) {
@@ -21,8 +21,7 @@ public class Game {
         shipsLeft.putAll(PlacebleShips);
 
 
-
-        while (playerMap.getPlacedShips() < 1) {
+        while (playerMap.getPlacedShips() < 5) {
             //scanner for user input
             playerMap.ShowMap();
             System.out.println("Enter a ship you want to place");
@@ -68,10 +67,8 @@ public class Game {
 
 
         //START OF THE GAME
-
         Map targetMap = new Map(10, 10);
-
-
-
+        StartGame startGame = new StartGame();
+        startGame.Start(playerMap, enemyMap, targetMap, enemy);
     }
 }
