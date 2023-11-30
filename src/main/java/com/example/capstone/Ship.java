@@ -7,15 +7,9 @@ public abstract class Ship {
     private List<ShipObserver> observers = new ArrayList<>();
     private boolean isSunk = false;
 
-    // Existing methods and properties of Ship class
-
-    public void hit() {
-        // Logic to determine if the ship is sunk
-        if (this.isSunk) {
-            notifyObservers();
-        }
-    }
-
+    public boolean getIsSunk() {
+        return isSunk;
+    } // Only used for testing
     public void registerObserver(ShipObserver o) {
         observers.add(o);
     }
@@ -28,6 +22,9 @@ public abstract class Ship {
         for (ShipObserver observer : observers) {
             observer.update(this);
         }
+    }
+    public int getObserverSize() {
+        return observers.size();
     }
 
 
@@ -52,6 +49,11 @@ public abstract class Ship {
     }
     public void reduceHealth() {
         this.health -= 1;
+        if (this.getHealth() <= 0) {
+            //System.out.println("Notify observers: "+ this.getObserverSize());
+            this.isSunk = true;
+            notifyObservers();
+        }
     }
 
     public void setSize(int size) {

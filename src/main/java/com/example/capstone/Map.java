@@ -6,7 +6,7 @@ import java.util.Random;
 
 
 public class Map {
-    enum Tiles {
+    public enum Tiles {
         S,
         D,
         U,
@@ -34,11 +34,6 @@ public class Map {
             for (int j = 0; j < this.height; j++)
                 map[i][j] = Tiles.W;
     }
-    public void TargetMap() {
-        for (int i = 0; i < this.width; i++)
-            for (int j = 0; j < this.height; j++)
-                map[i][j] = Tiles.X;
-    }
     public int getPlacedShips() {
         return this.placedShips;
     }
@@ -58,6 +53,7 @@ public class Map {
     }
 
     public Ship getShipFromTile(Tiles tile) {
+        System.out.println("HIT " + tile.toString());
         for (Ship ship : ships) {
             if (ship.getName().substring(0,1).equals(tile.toString())) {
                 return ship;
@@ -72,10 +68,15 @@ public class Map {
     public void removeShip(Ship ship) {
         this.ships.remove(ship);
     }
+    public void setObserver(StartGame startGame) {
+        for (Ship ship : ships) {
+            ship.registerObserver(startGame);
+        }
+    }
 
 
     public void addShip(Ship ship, int[] location, Ship.Direction direction) {
-        addShip(ship);
+        addShipToList(ship);
         try {
             switch (direction) {
                 case UP: // Transposed UP is LEFT
@@ -109,7 +110,7 @@ public class Map {
 
 
 
-    public void addShip(Ship ship) {
+    public void addShipToList(Ship ship) {
         this.ships.add(ship);
     }
 
