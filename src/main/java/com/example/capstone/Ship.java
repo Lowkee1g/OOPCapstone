@@ -1,6 +1,8 @@
 package com.example.capstone;
 
 public abstract class Ship {
+    private int size;
+    private String name;
     enum Direction {
         UP,
         DOWN,
@@ -8,11 +10,19 @@ public abstract class Ship {
         RIGHT
     }
 
-    public abstract void setSize(int size);
+    public void setSize(int size) {
+        this.size = size;
+    }
 
-    public abstract int getSize();
+    public int getSize() {
+        return this.size;
+    }
 
-    public abstract void setName(String name);
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public abstract String getName();
+    public String getName() {
+        return this.name;
+    }
 }

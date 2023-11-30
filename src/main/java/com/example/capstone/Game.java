@@ -30,7 +30,7 @@ public class Game {
             //prints out all available ships
             for (Integer key : shipsLeft.keySet()) {
                 Ship ship = shipsLeft.get(key);
-                System.out.println(key + " - " + ship); // This will print the key and the ship's name
+                System.out.println(key + " - " + ship.getName()); // This will print the key and the ship's name
             }
 
             //gets the shipID from the user
