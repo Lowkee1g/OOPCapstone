@@ -1,3 +1,5 @@
+//LOKE ANDREAS DINESEN DØJ
+//ldoj22@student.aau.dk
 package com.example.capstone.ships;
 
 import com.example.capstone.Ship;

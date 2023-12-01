@@ -1,3 +1,5 @@
+//LOKE ANDREAS DINESEN DØJ
+//ldoj22@student.aau.dk
 package com.example.capstone;
 
 import java.util.HashMap;
@@ -92,19 +94,12 @@ public class StartGame implements ShipObserver {
                 } else {
                     System.out.println("BOOM! you hit a ship");
 
+                    //Get the ship from the tile
                     Map.Tiles tile = enemyMap.getTile(location);
                     Ship ship = enemyMap.getShipFromTile(tile);
 
-
+                    //reduce the health of the ship
                     ship.reduceHealth();
-                    /*
-                    if (ship.getHealth() == 0) {
-                        System.out.println("You sunk a ship");
-                        enemyMap.removeShip(ship);
-                    }
-                    */
-
-
 
                     //Change the visual of the map
                     targetMap.setTile(location, Map.Tiles.H);
@@ -135,9 +130,7 @@ public class StartGame implements ShipObserver {
                 System.out.println("Hit ship: " + ship);
 
 
-                ship.reduceHealth(); // This will automatically trigger the observer if the ship is sunk
-
-                //System.out.println("Ship health: " + ship.getHealth());
+                ship.reduceHealth(); // This will  trigger the observer if the ship is sunk
 
                 //turn = true; // This is to give the turn back to the player ONlY if the enemy hits a ship
                 //Change the visual of the map

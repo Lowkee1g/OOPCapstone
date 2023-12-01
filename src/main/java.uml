@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/Loke/Documents/AAU/SW3/OOP/Capstone/src/main/java</OriginalElement>
+  <nodes>
+    <node x="110.25" y="71.0">com.example.capstone.Map</node>
+    <node x="2008.0" y="298.5">com.example.capstone.exceptions.InvalidShipIDException</node>
+    <node x="1619.0" y="307.5">com.example.capstone.ships.AircraftCarrier</node>
+    <node x="1143.0" y="307.5">com.example.capstone.ships.SpeedBoat</node>
+    <node x="1809.0" y="221.5">com.example.capstone.TerminalColors</node>
+    <node x="607.0" y="290.5">com.example.capstone.ShipObserver</node>
+    <node x="1464.0" y="307.5">com.example.capstone.ships.Ubmarine</node>
+    <node x="225.0" y="704.5">com.example.capstone.Game</node>
+    <node x="639.0" y="730.5">com.example.capstone.exceptions.InvalidCoordinatesException</node>
+    <node x="816.0" y="94.0">com.example.capstone.Ship</node>
+    <node x="0.0" y="632.0">com.example.capstone.StartGame</node>
+    <node x="1308.0" y="307.5">com.example.capstone.ships.Destroyer</node>
+    <node x="472.0" y="307.5">com.example.capstone.ships.Frigate</node>
+    <node x="440.0" y="713.5">com.example.capstone.Enemy</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.capstone.Map" target="com.example.capstone.Ship" relationship="TO_MANY">
+      <point x="0.0" y="-250.5" />
+      <point x="241.75" y="61.0" />
+      <point x="899.1" y="61.0" />
+      <point x="-55.400000000000006" y="-227.5" />
+    </edge>
+    <edge source="com.example.capstone.Enemy" target="com.example.capstone.ships.Ubmarine" relationship="CREATE">
+      <point x="0.0" y="-31.0" />
+      <point x="524.5" y="653.5" />
+      <point x="1526.5" y="653.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.capstone.ships.SpeedBoat" target="com.example.capstone.Ship" relationship="GENERALIZATION">
+      <point x="-67.5" y="-0.0" />
+      <point x="138.5" y="-0.0" />
+    </edge>
+    <edge source="com.example.capstone.Enemy" target="com.example.capstone.ships.Destroyer" relationship="CREATE">
+      <point x="0.0" y="-31.0" />
+      <point x="524.5" y="673.5" />
+      <point x="1547.5" y="673.5" />
+      <point x="1547.5" y="350.5" />
+      <point x="1371.0" y="350.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.capstone.ships.Frigate" target="com.example.capstone.Ship" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="524.5" y="79.0" />
+      <point x="843.7" y="79.0" />
+      <point x="-110.80000000000001" y="-227.5" />
+    </edge>
+    <edge source="com.example.capstone.Game" target="com.example.capstone.ships.Ubmarine" relationship="CREATE">
+      <point x="0.0" y="-40.0" />
+      <point x="307.5" y="643.5" />
+      <point x="1526.5" y="643.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.capstone.Game" target="com.example.capstone.Enemy" relationship="CREATE">
+      <point x="82.5" y="-0.0" />
+      <point x="-84.5" y="-0.0" />
+    </edge>
+    <edge source="com.example.capstone.Ship" target="com.example.capstone.ShipObserver" relationship="TO_MANY">
+      <point x="-138.5" y="-0.0" />
+      <point x="79.5" y="-0.0" />
+    </edge>
+    <edge source="com.example.capstone.Enemy" target="com.example.capstone.ships.SpeedBoat" relationship="CREATE">
+      <point x="0.0" y="-31.0" />
+      <point x="524.5" y="703.5" />
+      <point x="503.5" y="703.5" />
+      <point x="503.5" y="559.0" />
+      <point x="1210.5" y="559.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.capstone.ships.Destroyer" target="com.example.capstone.Ship" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="1371.0" y="79.0" />
+      <point x="1065.3" y="79.0" />
+      <point x="110.8" y="-227.5" />
+    </edge>
+    <edge source="com.example.capstone.Game" target="com.example.capstone.ships.Frigate" relationship="CREATE">
+      <point x="0.0" y="-40.0" />
+      <point x="307.5" y="602.0" />
+      <point x="524.5" y="602.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.capstone.Game" target="com.example.capstone.StartGame" relationship="CREATE">
+      <point x="-82.5" y="-0.0" />
+      <point x="87.5" y="-0.0" />
+    </edge>
+    <edge source="com.example.capstone.Enemy" target="com.example.capstone.ships.Frigate" relationship="CREATE">
+      <point x="0.0" y="-31.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.capstone.Game" target="com.example.capstone.exceptions.InvalidCoordinatesException" relationship="CREATE">
+      <point x="0.0" y="40.0" />
+      <point x="307.5" y="794.5" />
+      <point x="774.5" y="794.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.capstone.Game" target="com.example.capstone.ships.SpeedBoat" relationship="CREATE">
+      <point x="0.0" y="-40.0" />
+      <point x="307.5" y="592.0" />
+      <point x="503.5" y="592.0" />
+      <point x="503.5" y="559.0" />
+      <point x="1210.5" y="559.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.capstone.Game" target="com.example.capstone.ships.Destroyer" relationship="CREATE">
+      <point x="0.0" y="-40.0" />
+      <point x="307.5" y="663.5" />
+      <point x="1547.5" y="663.5" />
+      <point x="1547.5" y="350.5" />
+      <point x="1371.0" y="350.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.capstone.ships.Ubmarine" target="com.example.capstone.Ship" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="1526.5" y="69.0" />
+      <point x="1009.9" y="69.0" />
+      <point x="55.400000000000006" y="-227.5" />
+    </edge>
+    <edge source="com.example.capstone.StartGame" target="com.example.capstone.Map" relationship="TO_ONE">
+      <point x="43.75" y="-112.5" />
+      <point x="131.25" y="622.0" />
+      <point x="176.0" y="622.0" />
+      <point x="-65.75" y="250.5" />
+    </edge>
+    <edge source="com.example.capstone.StartGame" target="com.example.capstone.ShipObserver" relationship="REALIZATION">
+      <point x="-43.75" y="-112.5" />
+      <point x="43.75" y="612.0" />
+      <point x="686.5" y="612.0" />
+      <point x="0.0" y="31.0" />
+    </edge>
+    <edge source="com.example.capstone.Enemy" target="com.example.capstone.ships.AircraftCarrier" relationship="CREATE">
+      <point x="0.0" y="-31.0" />
+      <point x="524.5" y="693.5" />
+      <point x="1699.0" y="693.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.capstone.ships.AircraftCarrier" target="com.example.capstone.Ship" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="1699.0" y="59.0" />
+      <point x="954.5" y="59.0" />
+      <point x="0.0" y="-227.5" />
+    </edge>
+    <edge source="com.example.capstone.Game" target="com.example.capstone.ships.AircraftCarrier" relationship="CREATE">
+      <point x="0.0" y="-40.0" />
+      <point x="307.5" y="683.5" />
+      <point x="1699.0" y="683.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.example.capstone.Game" target="com.example.capstone.Map" relationship="CREATE">
+      <point x="0.0" y="-40.0" />
+      <point x="65.75" y="250.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.475647213690215" showDependencies="true" x="1139.5" y="468.00000000000017" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

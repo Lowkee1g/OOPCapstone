@@ -1,3 +1,6 @@
+//LOKE ANDREAS DINESEN DØJ
+//ldoj22@student.aau.dk
+
 package com.example.capstone;
 
 import com.example.capstone.exceptions.InvalidCoordinatesException;
@@ -25,12 +28,6 @@ public class Game {
 
 
         shipsLeft.putAll(PlacebleShips);
-        /*
-        for (Ship ship : shipsLeft.values()) {
-            ship.registerObserver(startGame);
-        }
-         */
-
 
         while (playerMap.getPlacedShips() < 5) {
             playerMap.ShowMap();
@@ -45,30 +42,27 @@ public class Game {
                 System.out.println(key + " - " + ship.getName()); // This will print the key and the ship's name
             }
 
-                //gets the shipID from the user
-                int shipID = scanner.nextInt();
-                //checks if shipID can be placed
-                if (!shipsLeft.containsKey(shipID)) {
-                    throw new InputMismatchException("ShipID not found, Please enter an ID of an availeble ship");
-                }
+            //gets the shipID from the user
+            int shipID = scanner.nextInt();
+            //checks if shipID can be placed
+            if (!shipsLeft.containsKey(shipID)) {
+                throw new InputMismatchException("ShipID not found, Please enter an ID of an availeble ship");
+            }
 
-                System.out.println("you are placing a: " + shipID);
-                System.out.println("Enter the coordinates of the ship '0,0': ");
-                System.out.println("Then enter the direction of the ship 'UP, DOWN, LEFT, RIGHT': ");
+            System.out.println("you are placing a: " + shipID);
+            System.out.println("Enter the coordinates of the ship '0,0': ");
+            System.out.println("Then enter the direction of the ship 'UP, DOWN, LEFT, RIGHT': ");
 
-                //gets the coordinates from the user and splits them into an array
-                String input = scanner.nextLine(); // This is to clear the buffer
-                input = scanner.nextLine();
-                if (!input.contains(",") || input.length() != 3 || input.contains(" ") || input.contains(".")) {
-                    throw new InvalidCoordinatesException("Invalid coordinates, Please enter coordinates like this: 0,0");
-                }
-                String[] coordinates = input.split(",");
-
-
+            //gets the coordinates from the user and splits them into an array
+            String input = scanner.nextLine(); // This is to clear the buffer
+            input = scanner.nextLine();
+            if (!input.contains(",") || input.length() != 3 || input.contains(" ") || input.contains(".")) {
+                throw new InvalidCoordinatesException("Invalid coordinates, Please enter coordinates like this: 0,0");
+            }
+            String[] coordinates = input.split(",");
 
 
-
-                //gets the direction from the user
+            //gets the direction from the user
             Ship.Direction direction = Ship.Direction.valueOf(scanner.nextLine());
             System.out.println("you are placing a: " + shipID + " at " + coordinates[0] + "," + coordinates[1] + " facing " + direction);
 

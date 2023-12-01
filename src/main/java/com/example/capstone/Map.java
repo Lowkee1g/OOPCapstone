@@ -1,3 +1,6 @@
+//LOKE ANDREAS DINESEN DØJ
+//ldoj22@student.aau.dk
+
 package com.example.capstone;
 
 import java.util.ArrayList;
@@ -36,9 +39,6 @@ public class Map {
     }
     public int getPlacedShips() {
         return this.placedShips;
-    }
-    public Tiles[][] getTiles() {
-        return this.map;
     }
 
     public Tiles getTile(int[] location) {

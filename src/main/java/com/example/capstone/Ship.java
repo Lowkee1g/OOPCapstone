@@ -1,3 +1,5 @@
+//LOKE ANDREAS DINESEN DØJ
+//ldoj22@student.aau.dk
 package com.example.capstone;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,17 +16,10 @@ public abstract class Ship {
         observers.add(o);
     }
 
-    public void removeObserver(ShipObserver o) {
-        observers.remove(o);
-    }
-
     protected void notifyObservers() {
         for (ShipObserver observer : observers) {
             observer.update(this);
         }
-    }
-    public int getObserverSize() {
-        return observers.size();
     }
 
 
@@ -33,7 +28,6 @@ public abstract class Ship {
     private int size;
     private int health;
     private String name;
-    private int[][] location;
     enum Direction {
         UP,
         DOWN,
